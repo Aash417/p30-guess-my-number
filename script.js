@@ -47,3 +47,17 @@ document.querySelector('.check').addEventListener('click', function () {
     }
   }
 });
+
+cument.querySelector('.again').addEventListener('click', function () {
+  score = 10;
+  secretNumber = Math.trunc(Math.random() * 20 + 1);
+  console.log(secretNumber);
+
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').style.width = '30rem';
+  document.querySelector('body').style.backgroundColor = 'black';
+
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.guess').value = '';
+});
